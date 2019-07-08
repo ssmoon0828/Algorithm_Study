@@ -12,13 +12,12 @@
 [출력]
 각 테스트 케이스마다 A+B를 출력한다.
 '''
+test = ''
 
-# 데이터 입력
-data = open('C:\\Users\\a\\Desktop\\Algorithm_Study\\04_while문\\04_01_A+B_1.txt', 'r')
-data_list = []
-
-for line in data:
-    data_list.append(line.strip())
-
-data_list = list(map(int, data_list.split()))
-# while문 & 출력
+while True:
+    test = input('숫자를 입력하세요 :')
+    if test == '0 0':
+        break
+    else:
+        test = test.split()
+        print(int(test[0]) + int(test[1]))
