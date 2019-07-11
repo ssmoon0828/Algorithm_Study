@@ -9,3 +9,18 @@ N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프�
 첫째 줄에 주어진 정수 N개의 최솟값과 최댓값을 공백으로 구분해 출력한다.
 '''
 
+length = int(input())
+
+seq = list(map(int, input().split()))
+
+min_num = 100000
+max_num = -100000
+
+for i in range(length):
+    if seq[i] <= min_num:
+        min_num = seq[i]
+    
+    if seq[i] >= max_num:
+        max_num = seq[i]
+
+print(min_num, max_num)

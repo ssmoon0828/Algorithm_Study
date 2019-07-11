@@ -1,4 +1,4 @@
-'''
+﻿'''
 [문제]
 두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.
 
@@ -16,13 +16,10 @@ A와 B가 같은 경우에는 '=='를 출력한다.
 -10,000 ≤ A, B ≤ 10,000
 '''
 
-# 데이터 입력
-numbers = input('두 수를 입력하세요 : ')
-numbers = numbers.split(' ')
-num1 = numbers[0]
-num2 = numbers[1]
+numbers = input().split()
+num1 = int(numbers[0])
+num2 = int(numbers[1])
 
-# 조건문 & 출력
 if num1 > num2:
     print('>')
 elif num1 < num2:

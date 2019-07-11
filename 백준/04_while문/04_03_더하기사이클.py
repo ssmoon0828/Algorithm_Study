@@ -15,21 +15,31 @@ N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작
 첫째 줄에 N의 사이클 길이를 출력한다.
 '''
 
-# 데이터 입력
-num_string = input('0보다 크거나 같고, 99보다 작거나 같은 정수를 입력하세요 :')
-num_string_tmp = num_string
+import sys
 
 iteration = 0
-
-if int(num_string) < 10:
-    num_string = '0' + num_string
-
-num = int(num_string[0]) + int(num_string[1])
-
+org_num = int(sys.stdin.readline())
+org_num_tmp = org_num
 
 while True:
-
-    if num < 10:
-        num_string = '0' + str(num)
+    if org_num < 10:
+        org_num_string = '0' + str(org_num)
     else:
-        num_string = str(num)
+        org_num_string = str(org_num)
+    
+    org_num_add = int(org_num_string[0]) + int(org_num_string[1])
+    
+    if org_num_add < 10:
+        org_num_add_string = '0' + str(org_num_add)
+    else:
+        org_num_add_string = str(org_num_add)
+    
+    new_num = org_num_string[1] + org_num_add_string[1]
+    
+    org_num = int(new_num)
+    iteration += 1
+    
+    if org_num == org_num_tmp:
+        break
+
+print(iteration)

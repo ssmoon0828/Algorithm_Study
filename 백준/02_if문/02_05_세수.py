@@ -18,8 +18,19 @@ z = float(three_num[2])
 
 # 조건문 & 출력
 if (x >= y) and (x >= z):
-    print(x)
+    if (y >= z):
+        print(y)
+    else:
+        print(z)
+
 elif (y >= x) and (y >= z):
-    print(y)
+    if (x >= z):
+        print(x)
+    else:
+        print(z)
+
 else:
-    print(z)
+    if (x >= y):
+        print(x)
+    if (y >= x):
+        print(y)
